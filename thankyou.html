@@ -11,7 +11,7 @@
 
     <img id="rizz" src="1219.gif" alt="rizzler god" class="responsive" />
     <br />
-    <audio controls autoplay loop>
+    <audio id="audio" loop>
       <source src="audio2.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
@@ -19,5 +19,15 @@
     <button class="button" onclick="location.href='date.html'">
       click for sussy
     </button>
+
+    <script>
+      // Play the audio after any user interaction
+      document.addEventListener('click', function () {
+        const audio = document.getElementById('audio');
+        if (audio.paused) {
+          audio.play();
+        }
+      });
+    </script>
   </body>
 </html>
